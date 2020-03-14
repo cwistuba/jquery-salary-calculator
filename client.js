@@ -18,10 +18,11 @@ function submitemployeeInfo(event) {
     employeeTitle: $(".js-input-title").val(),
     employeeSalary: parseFloat($(".js-input-salary").val())
   };
+
   employeeForm.push(employeeInfo);
   console.log(employeeForm);
   $(".js-input-firstname").val("");
-  $(".js-input-lasttname").val("");
+  $(".js-input-lastname").val("");
   $(".js-input-id").val("");
   $(".js-input-title").val("");
   $(".js-input-salary").val("");
@@ -44,7 +45,7 @@ function render() {
     <td>${individualEmployee.employeeID}</td>
     <td>${individualEmployee.employeeTitle}</td>
     <td>${individualEmployee.employeeSalary}</td>
-    <td><button class="js-btn-dlt">Delete</button></td>
+    <td><button class="js-btn-dlt" data-index="${i}">Delete</button></td>
     </tr>
     `);
   }
@@ -55,4 +56,7 @@ function render() {
 
 function dltEmployee() {
   console.log("Dlt:", this);
+  const employeeIndex = $(this).data("index");
+  employeeForm.splice(employeeIndex, 1);
+  render();
 }
