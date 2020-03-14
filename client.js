@@ -4,6 +4,7 @@ const employeeForm = [];
 
 function init() {
   $(".js-add-employee-salary").on("submit", submitemployeeInfo);
+  $(".js-table-body").on("click", ".js-btn-dlt", dltEmployee);
 }
 
 function submitemployeeInfo(event) {
@@ -19,4 +20,39 @@ function submitemployeeInfo(event) {
   };
   employeeForm.push(employeeInfo);
   console.log(employeeForm);
+  $(".js-input-firstname").val("");
+  $(".js-input-lasttname").val("");
+  $(".js-input-id").val("");
+  $(".js-input-title").val("");
+  $(".js-input-salary").val("");
+
+  render();
+}
+
+function render() {
+  $(".js-table-body").empty();
+  let totalMonthly = 0;
+
+  for (let i = 0; i < employeeForm.length; i++) {
+    let individualEmployee = employeeForm[i];
+    totalMonthly += individualEmployee.employeeSalary / 12;
+
+    $(".js-table-body").append(`
+    <tr>
+    <td>${individualEmployee.employeeNameFirst}</td>
+    <td>${individualEmployee.employeeNameLast}</td>
+    <td>${individualEmployee.employeeID}</td>
+    <td>${individualEmployee.employeeTitle}</td>
+    <td>${individualEmployee.employeeSalary}</td>
+    <td><button class="js-btn-dlt">Delete</button></td>
+    </tr>
+    `);
+  }
+  console.log(totalMonthly);
+
+  $(".js-total-monthly").text(totalMonthly);
+}
+
+function dltEmployee() {
+  console.log("Dlt:", this);
 }
