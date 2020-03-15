@@ -1,3 +1,54 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: rgb(80, 124, 106);
+  color: rgb(233, 233, 197);
+  text-shadow: 2px 2px 1px black;
+  text-align: center;
+  padding: 5px;
+}
+
+h2 {
+  background-color: rgb(233, 233, 197);
+  color: rgb(80, 124, 106);
+  text-shadow: 1px 1px 0px black;
+  text-align: center;
+  margin-top: 0px;
+  padding: 15px;
+  box-shadow: 0 1px 13px rgb(0, 0, 0, 0.5);
+}
+
+h3 {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.btn {
+  background-color: rgb(80, 124, 106);
+  color: rgb(233, 233, 197);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .totalmonthly {
-  background-color: aqua;
+  margin-top: 40px;
 }

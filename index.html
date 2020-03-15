@@ -15,65 +15,64 @@
       <h1>Ursus Salary Calculator</h1>
     </header>
 
-    <form class="js-add-employee-salary">
-      <h2>Add Employee</h2>
+    <h2>Add Employee</h2>
+    <div class="container">
+      <form class="js-add-employee-salary">
+        <input
+          class="js-input-firstname"
+          type="text"
+          placeholder="First Name"
+          id="First Name"
+        />
+        <input
+          class="js-input-lastname"
+          type="text"
+          placeholder="Last Name"
+          id="Last Name"
+        />
+        <input class="js-input-id" type="number" placeholder="ID" id="ID" />
+        <input
+          class="js-input-title"
+          type="text"
+          placeholder="Title"
+          id="Title"
+        />
+        <input
+          class="js-input-salary"
+          type="number"
+          placeholder="Annual Salary"
+          id="Annual Salary"
+        />
 
-      <input
-        class="js-input-firstname"
-        type="text"
-        placeholder="First Name"
-        id="First Name"
-      />
-      <input
-        class="js-input-lastname"
-        type="text"
-        placeholder="Last Name"
-        id="Last Name"
-      />
-      <input class="js-input-id" type="number" placeholder="ID" id="ID" />
-      <input
-        class="js-input-title"
-        type="text"
-        placeholder="Title"
-        id="Title"
-      />
-      <input
-        class="js-input-salary"
-        type="number"
-        placeholder="Annual Salary"
-        id="Annual Salary"
-      />
+        <button class="btn js-click-submit" type="submit">Submit</button>
+      </form>
 
-      <div>
-        <button class="js-click-submit" type="submit">Submit</button>
+      <h3>Employees</h3>
+      <table class="js-table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="js-table-body">
+          <tr class="js-table-body-row">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button class="btn js-btn-dlt">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="totalmonthly">
+        Total Monthly: <span class="js-total-monthly"></span>
       </div>
-    </form>
-
-    <h3>Employees</h3>
-    <table class="js-table">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Annual Salary</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody class="js-table-body">
-        <tr class="js-table-body-row">
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td><button class="js-btn-dlt"></button></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="totalmonthly">
-      Total Monthly: <span class="js-total-monthly"></span>
     </div>
   </body>
 </html>
